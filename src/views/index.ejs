@@ -9,7 +9,7 @@
     <div class="head">
         <h1>Conversor de arquivos JSON para CSV</h1>
     </div>
-    <div>
+    <div class="centro">
         <form action="http://localhost:3000/test/upload" method="post" enctype="multipart/form-data">
             <input class="fileinput" type="file" name="filesup" id="files"><br>
             <button class="btn" type="submit">Enviar</button><br>
@@ -22,24 +22,24 @@
 <style>
     body {
         background-color: wheat;
+        margin: 0;
     }
     .btn {
-        border-radius: 8px;
+        border-radius: 7px;
         margin-bottom: 5px;
+        margin: 5px 5px 5px 10px;
     }
     .fileinput {
-        margin-top: 10px;
-        margin-bottom: 5px;
+        margin: 10px 10px 10px 10px;
     }
     .head {
         display: flex;
-        border-style: solid;
         border-color: antiquewhite;
         background-color: #8a8884;
-
     }
 
     .head h1 {
         padding-left: 10px;
     }
+    
 </style>

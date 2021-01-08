@@ -3,8 +3,8 @@ const path = require('path')
 
 module.exports = app => {
     const convertFile = (file) => {
-        const absolute = '/home/godev/Documentos/projects/json-cvg/uploads'
-        const paths = path.join(absolute, file[0].originalname)
+        const absolute = '/tmp/uploads'
+        const paths = path.join(absolute, file)
         
         fs.readFile(paths , (err, rawdata) => {
     
@@ -17,7 +17,7 @@ module.exports = app => {
         ].join('\r\n')
   
         const absoluteConverted = '/home/godev/Documentos/projects/json-cvg/convertions'
-        var response = path.join(absoluteConverted, `${file[0].originalname}.csv`)
+        var response = path.join(absoluteConverted, `${file}.csv`)
         fs.writeFile(response, csv, (err) => {
             if(err) {
                 throw err

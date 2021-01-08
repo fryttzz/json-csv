@@ -1,23 +1,9 @@
 const formidable = require('formidable');
 const express = require('express')
-const multer = require('multer')
 const fs = require('fs')
-//const path = require('path')
 
 module.exports = app => {
     const router = express.Router()
-
-    const storage = multer.diskStorage({
-        destination: function (req, file, cb) {
-            cb(null, "uploads/")
-        },
-        filename: function (req, file, cb) {
-            cb(null, file.originalname)
-        }
-    })
-    const upload = multer({
-        storage: storage
-        }).any('files')
     
     router.post('/upload', async (req, res, next) => {
         try {

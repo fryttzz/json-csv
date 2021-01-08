@@ -6,12 +6,40 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="head">
+        <h1>Conversor de arquivos JSON para CSV</h1>
+    </div>
     <div>
         <form action="http://localhost:3000/test/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="filesup" id="files">
-            <button type="submit">Enviar</button>
-            <button type="button">Baixar</button>
+            <input class="fileinput" type="file" name="filesup" id="files"><br>
+            <button class="btn" type="submit">Enviar</button><br>
+            <button class="btn" type="reset">Limpar</button>
         </form>
     </div>
 </body>
 </html>
+
+<style>
+    body {
+        background-color: wheat;
+    }
+    .btn {
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+    .fileinput {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .head {
+        display: flex;
+        border-style: solid;
+        border-color: antiquewhite;
+        background-color: #8a8884;
+
+    }
+
+    .head h1 {
+        padding-left: 10px;
+    }
+</style>

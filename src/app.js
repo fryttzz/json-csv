@@ -7,6 +7,7 @@ app.use(express.static(path.join(__dirname,'views')))
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile)
 app.set('view engine', 'html')
+app.use('/files', express.static('/home/godev/Documentos/projects/json-cvg/convertions'));
 
 app.get('/', (req, res) => {
     res.render('index.ejs')

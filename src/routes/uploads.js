@@ -29,14 +29,13 @@ module.exports = app => {
                     if (err) throw err;
                 });
                 const result = await app.services.converter.convertFile(files.filesup.name)
-                //res.send(`/home/godev/Documentos/projects/json-cvg/convertions/${files.filesup.name}.csv`)
-                res.redirect('/')
+                setTimeout(() => {
+                    res.redirect(`/files/${files.filesup.name}.csv`)
+                }, 4000)
             });
         } catch (error) {
             res.status(500).send(error)
         }
-        
-        
     })
     
 

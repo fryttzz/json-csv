@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <img alt="Vue logo" height="120" src="./assets/signin.png">
+  <HelloWorld msg="JSON to CSV converter"/>
+  <FileUploader />
+</div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import FileUploader from './components/FileUpload.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    FileUploader
   }
 }
 </script>

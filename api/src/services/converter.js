@@ -16,7 +16,7 @@ module.exports = app => {
             ...data.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(';'))
         ].join('\r\n')
   
-        const absoluteConverted = '/home/godev/Documentos/projects/json-cvg/convertions'
+        const absoluteConverted = '/home/godev/Documentos/projects/json-cvg/api/convertions'
         var response = path.join(absoluteConverted, `${file}.csv`)
         fs.writeFile(response, csv, (err) => {
             if(err) {

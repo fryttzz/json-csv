@@ -1,9 +1,9 @@
 <template>
-<div>
-  <img alt="Vue logo" height="120" src="./assets/signin.png">
-  <HelloWorld msg="JSON to CSV converter"/>
-  <FileUploader />
-</div>
+  <div>
+    <img alt="Profuzzy logo" height="120" src="./assets/logo.png">
+    <HelloWorld msg="Conversor de JSON para CSV"/>
+    <FileUploader />
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #139032;
   margin-top: 60px;
 }
 </style>
